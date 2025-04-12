@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Чат на Socket.IO</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrap">
+      <ul id="messages"></ul>
+      <form id="form">
+        <input id="input" autocomplete="off" placeholder="Напишіть повідомлення..." />
+        <button>Відправити</button>
+      </form>
+      
+      <div class="theme-controls">
+        <div class="color-picker-container">
+          <label for="color-picker" class="color-label">Змінити колір сайту</label>
+          <input type="color" id="color-picker" value="#ffffff">
+        </div>
+      </div>
+
+      <div class="online-users">
+        Онлайн: <span id="online-count">0</span>
+      </div>
+    </div>
+    
+    <audio id="message-sound" src="./sounds/fart-with-reverb-39675.mp3" preload="auto" muted></audio>
+    
+   
+    <script src="./main.js"></script>
+  </body>
+</html>
